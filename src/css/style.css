@@ -1,0 +1,21 @@
+.game_field {
+	margin: auto;
+}
+
+.field_container {
+	display: flex;
+	flex-wrap: wrap;
+
+	width: 700px;
+	margin:  auto;
+}
+
+.cell {
+	display:  flex;
+	justify-content: center;
+	align-items: center;
+	width: 150px;
+	height: 150px;
+	margin: 10px;
+	background-color: #a38989;
+}
