@@ -1,7 +1,7 @@
 ## DOM
 Git-pages:
 
-[![Build status](https://ci.appveyor.com/api/projects/status/g8getdhi85y02fmd?svg=true)](https://ci.appveyor.com/project/biryukova-nadezhda/ahj-hw-1-1)
+[![Build status](https://ci.appveyor.com/api/projects/status/0uyv16panlk5qexs?svg=true)](https://ci.appveyor.com/project/biryukova-nadezhda/ahj-hw-2-1)
 
 ---
 ### Перемещение элемента
