@@ -1,32 +1,53 @@
-// Определим количество ячеек в поле
-const field = document.getElementById('field');
-const childCount = field.childElementCount;
+// Импортируем картинку
+import image from '../img/goblin.png';
 
-// создаем картинку
+// Задаем размер поля
+const n = 4;
+
+// Создаем картинку
 const img = document.createElement('img');
-img.src = '../img/goblin.png';
+img.src = image;
+// img.src = "goblin.png";
+img.className = 'img_goblin';
 
 // Функция рандомайзер
 function getRandom(max) {
   return Math.floor(Math.random() * max);
 }
 
+// функция создания cекции для игрового поля
+function createSection() {
+  const body = document.querySelector('body');
+  const section = '<section class="game_field"><div class="field_container" id="fieldGame"></div></section>';
+  body.insertAdjacentHTML('afterbegin', section);
+}
+
+// Функция создания поля, n - размер квадратного поля
+function generateField(x) {
+  const field = document.getElementById('fieldGame');
+
+  for (let i = 0; i < x ** 2; i += 1) {
+    const cell = `<div class="cell" data-cell="${i}"></div>`;
+    field.insertAdjacentHTML('beforeend', cell);
+  }
+}
+
 // Функция вставления картинки
 function insertImg() {
-  const i = getRandom(childCount);
+  const max = n ** 2;
+  const i = getRandom(max);
   const cell = document.querySelector(`div[data-cell='${i}']`);
   cell.append(img);
 }
 
-function removeEl() {
-  const remEl = field.querySelector('div > img');
-  remEl.remove();
+// Функция начала игры
+function start() {
+  createSection();
+  generateField(n);
+
+  setInterval(() => {
+    insertImg();
+  }, 1000);
 }
 
-setInterval(() => {
-  insertImg();
-}, 1000);
-
-setInterval(() => {
-  removeEl();
-}, 1500);
+start();

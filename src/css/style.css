@@ -6,16 +6,22 @@
 	display: flex;
 	flex-wrap: wrap;
 
-	width: 700px;
 	margin:  auto;
+	max-width: 500px;
 }
 
 .cell {
 	display:  flex;
 	justify-content: center;
 	align-items: center;
-	width: 150px;
-	height: 150px;
+
 	margin: 10px;
-	background-color: #a38989;
+	width: 100px;
+	height: 100px;
+
+	background-color: #2e28285c;
+}
+
+.img_goblin {
+	width:  100%;
 }
